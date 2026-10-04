@@ -7,25 +7,24 @@
 
 **Theme:**
 
-TODO: Name and briefly describe your game's theme.
+Whisperwood Manor — A horror-themed adventure game set inside an abandoned and haunted mansion.
 
 **Storyline:**
 
-TODO: In one short paragraph, explain the setting, the player's goal, the items
-the player must gather, and the threat created by the villain.
+The player is trapped inside Whisperwood Manor, an abandoned mansion haunted by the spirit of its former caretaker. To escape, the player must explore the mansion and collect six items before confronting the Caretaker. The player must collect the Old Key, Silver Knife, Lantern, Caretaker's Journal, Music Box, and Crowbar. If the player enters the Master Bedroom before collecting all six items, the Caretaker defeats the player.
 
 ## Rooms
 
 Project One requires a minimum of eight rooms.
 
-1. TODO: Start room
-2. TODO: Room
-3. TODO: Room
-4. TODO: Room
-5. TODO: Room
-6. TODO: Room
-7. TODO: Room
-8. TODO: Villain room
+1. Front Hall - Start room
+2. Library
+3. Kitchen
+4. Conservatory
+5. Study
+6. Attic
+7. Basement
+8. Master Bedroom - Villain room
 
 Add more rooms if your design needs them.
 
@@ -34,19 +33,19 @@ Add more rooms if your design needs them.
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Item
-2. TODO: Item
-3. TODO: Item
-4. TODO: Item
-5. TODO: Item
-6. TODO: Item
+1. Old Key - Library
+2. Silver Knife - Kitchen
+3. Lantern - Conservatory
+4. Caretaker's Journal - Study
+5. Music Box - Attic
+6. Crowbar - Basement
 
 If you add rooms beyond the minimum, add an item for every additional room
 except the start room and villain room.
 
 ## Villain
 
-TODO: Identify and briefly describe the villain.
+The Caretaker - The ghost of Whisperwood Manor's former caretaker. He waits in the Master Bedroom and defeats the player if they enter before collecting all six required items.
 
 ## Storyboard and Map Check
 
