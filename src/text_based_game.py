@@ -5,21 +5,26 @@
 
 def show_instructions():
     """Display the game objective and available commands."""
-    # TODO: Print instructions that match your game and commands.
-    pass
+    print("Welcome to Whisperwood Manor!")
+    print("Collect all 6 items before facing the Caretaker.")
+    print("Move: go north, go south, go east, go west")
+    print("Collect items: get <item name>")
+    print("Avoid the Master Bedroom until you have all 6 items!")
 
 
 def show_status(current_room, inventory, rooms):
     """Display the player's current game status."""
-    # TODO: Show the current room.
-    # TODO: Show the current inventory.
-    # TODO: Show the current-room item when one is available.
-    pass
+    print("\nCurrent Room:", current_room)
+    print("Inventory:", inventory)
+
+    if 'item' in rooms[current_room]:
+        if rooms[current_room]['item'] not in inventory:
+            print("You see:", rooms[current_room]['item'])
 
 
 def main():
     """Run the main gameplay loop."""
-        rooms = {
+    rooms = {
         'Front Hall': {
             'North': 'Master Bedroom',
             'West': 'Conservatory'
@@ -65,7 +70,7 @@ def main():
 
         inventory = []
 
-    # TODO: Call the instruction function at the appropriate time.
+        show_instructions()
 
     # TODO: Create the gameplay loop.
     # Within the loop:
