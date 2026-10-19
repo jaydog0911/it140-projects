@@ -66,22 +66,22 @@ def main():
         }
     }
 
-        current_room = 'Front Hall'
+    current_room = 'Front Hall'
 
-        inventory = []
+    inventory = []
 
-        show_instructions()
+    show_instructions()
 
-        while True:
-        show_status(current_room, inventory, rooms)
+    while True:
+         show_status(current_room, inventory, rooms)
 
-        command = input("\nEnter your move: ").strip().lower()
+         command = input("\nEnter your move: ").strip().lower()
 
-        if command == 'quit':
+         if command == 'quit':
             print("Thanks for playing!")
             break
 
-        elif command.startswith('go '):
+         elif command.startswith('go '):
             direction = command[3:].strip().capitalize()
 
             if direction in rooms[current_room]:
@@ -103,7 +103,7 @@ def main():
                 print("You can't go that way.")
            
 
-        elif command.startswith('get '):
+         elif command.startswith('get '):
             item_name = command[4:].strip()
             room_item = rooms[current_room].get('item')
 
@@ -116,7 +116,7 @@ def main():
             else:
                 print("That item is not in this room.")
 
-        else:
+         else:
             print("Invalid command. Please try again.")
     
 
