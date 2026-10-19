@@ -72,19 +72,53 @@ def main():
 
         show_instructions()
 
-    # TODO: Create the gameplay loop.
-    # Within the loop:
-    #   - Show player status.
-    #   - Prompt for the player's next command.
-    #   - Handle valid movement commands.
-    #   - Handle valid get-item commands.
-    #   - Validate invalid commands.
-    #   - Update room/inventory state when appropriate.
-    #   - Detect and display the required winning outcome.
-    #   - Detect and display the required losing outcome.
-    #   - End the loop when the player has won or lost.
-    pass
+        while True:
+        show_status(current_room, inventory, rooms)
 
+        command = input("\nEnter your move: ").strip().lower()
+
+        if command == 'quit':
+            print("Thanks for playing!")
+            break
+
+        elif command.startswith('go '):
+            direction = command[3:].strip().capitalize()
+
+            if direction in rooms[current_room]:
+                current_room = rooms[current_room][direction]
+                print("You moved to the", current_room)
+           
+
+                if 'villain' in rooms[current_room]:
+                    if len(inventory) == 6:
+                        print("Congratulations! You collected all 6 items!")
+                        print("You defeated the Caretaker!")
+                        print("YOU WIN!")
+                    else:
+                        print("The Caretaker caught you!")
+                        print("GAME OVER!")
+                    break
+
+            else:
+                print("You can't go that way.")
+           
+
+        elif command.startswith('get '):
+            item_name = command[4:].strip()
+            room_item = rooms[current_room].get('item')
+
+            if room_item and item_name == room_item.lower():
+                if room_item not in inventory:
+                    inventory.append(room_item)
+                    print("You picked up the", room_item)
+                else:
+                    print("You already have that item.")
+            else:
+                print("That item is not in this room.")
+
+        else:
+            print("Invalid command. Please try again.")
+    
 
 if __name__ == "__main__":
     main()
