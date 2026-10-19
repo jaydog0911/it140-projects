@@ -19,11 +19,51 @@ def show_status(current_room, inventory, rooms):
 
 def main():
     """Run the main gameplay loop."""
-    # TODO: Create the full room/item dictionary from your Project One map.
+        rooms = {
+        'Front Hall': {
+            'North': 'Master Bedroom',
+            'West': 'Conservatory'
+        },
+        'Conservatory': {
+            'East': 'Front Hall',
+            'North': 'Study',
+            'item': 'Lantern'
+        },
+        'Study': {
+            'South': 'Conservatory',
+            'North': 'Attic',
+            'item': "Caretaker's Journal"
+        },
+        'Attic': {
+            'South': 'Study',
+            'East': 'Library',
+            'item': 'Music Box'
+        },
+        'Library': {
+            'West': 'Attic',
+            'East': 'Kitchen',
+            'item': 'Old Key'
+        },
+        'Kitchen': {
+            'West': 'Library',
+            'South': 'Basement',
+            'item': 'Silver Knife'
+        },
+        'Basement': {
+            'North': 'Kitchen',
+            'West': 'Master Bedroom',
+            'item': 'Crowbar'
+        },
+        'Master Bedroom': {
+            'South': 'Front Hall',
+            'East': 'Basement',
+            'villain': 'The Caretaker'
+        }
+    }
 
-    # TODO: Set the player's starting room.
+        current_room = 'Front Hall'
 
-    # TODO: Create the player's inventory.
+        inventory = []
 
     # TODO: Call the instruction function at the appropriate time.
 
